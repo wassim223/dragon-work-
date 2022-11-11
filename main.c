@@ -1,27 +1,32 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
-#include"reclamation.h"
+#include"utilisateur.h"
+
 
 int main()
 {
-    reclamation r1= {"choix multiple de vote ", "faute",122,2,1},r2= {"influence d'agent bureau ", "grave",233,3,2},r3;
-    int x=ajouter("reclamation.txt", r1);
-    /*
-    if(x==1)
-        printf("\najout de reclamation avec succés");
-    else printf("\nechec ajout");
-        */
-    x=modifier("reclamation.txt",1,r2 );
+    utilisateur u1= {"wassim","ferchichi",3,"sep",19,"14320","22747",1,"wass","1",1,1}, u2= {"wassff","fereeechichi",3,"sep",19,"14320","22747",1,"wass","1",1,1},u3 ;
 
+    /*int x=ajouter("utilisateur.txt",u1);
     if(x==1)
-        printf("\nModification de reclamation avec succés");
-    else printf("\nechec Modification");
-    x=supprimer("reclamation.txt",1 );
+        printf(" ajout d utilisateur avec succés");
+    else printf("echec ajout"); */
+
+     int x=modifier("utilisateur.txt",1,u2 );
+     if(x==1)
+        printf("Modification d utilisateur avec succés");
+    else printf("echec Modification"); 
+
+   /*x=supprimer("utilisateur.txt",1);
     if(x==1)
-        printf("\nSuppression de reclamation avec succés");
-    else printf("\nechec Suppression");
-    r3=chercher("reclamation.txt",3 );
-    if(r3.id==-1)
-        printf("introuvable");
-    return 0;
+        printf("Suppression d utilisateur avec succés");
+    else printf("echec Suppression"); 
+
+   u3=chercher("utilisateur.txt",3 );
+   if(u3.id==-1)
+        printf("introuvable"); 
+	else printf ("exist");*/
+    
+return 0; 
 }
