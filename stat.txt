@@ -1,0 +1,9 @@
+ nombre des femmes est : 1  nombre hommes est : 9 
+ nombre de vote est : 10  
+ nb hommes/ nbvotes est : 0.900000 
+ nb femmes/nb votes est : 0.100000 
+  nombre des femmes est : 1  nombre hommes est : 10 
+ nombre de vote est : 11  
+ nb hommes/ nbvotes est : 0.909091 
+ nb femmes/nb votes est : 0.090909 
+ 

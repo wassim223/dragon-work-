@@ -1,33 +1,39 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
-#include"electorale.h"
+#include"utilisateur.h"
+
 
 int main()
 {
-vote v1={10,1} ;
-liste_electorale l1= {10,11,12,1,22,12,2022},l2= {00,11,22,2,23,12,2022},l3;
-int x,y,z,k ,nb;
-x =ajouterlist("liste.txt", l1);
+    utilisateur u1= {"wassim","ferchichi",3,"sep",19,"14320","22747",1,"wass","h",1,1,1}, u2= {"wassff","fereeechichi",3,"sep",19,"14320","22747",2,"wass","h",0,1,0},u3 ;
 
-if(x==1)
-printf("\najout de liste avec succés");
-else printf("\nechec ajout");
-k =ajoutervote("vote.txt", v1);
+     int x=ajouter("utilisateur.txt",u1);
+    if(x==1)
+        printf(" ajout d utilisateur avec succés");
 
-if(k==1)
-printf("\najout de vote avec succés");
-else printf("\nechec ajout");
+    else printf("echec ajout");
+  /*int x=modifier("utilisateur.txt",1,u2 );
+     if(x==1)
+        printf("Modification d utilisateur avec succés");
+    else printf("echec Modification");  
 
-y=modifierlist("liste.txt",10, l2);
-if(y==1)
-printf("\nModification de liste avec succés");
-else printf("\nechec Modification");
-/*z=supprimerlist("liste.txt",1 );
-if(z==1)
-printf("\nSuppression de liste avec succés");
-else printf("\nechec Suppression");
-l3=chercherlist("liste.txt",00 );
-if(l3.id_election==-1)
-printf("introuvable");*/
-return 0;
+
+   /*x=supprimer("utilisateur.txt",1);
+    if(x==1)
+        printf("Suppression d utilisateur avec succés");
+    else printf("echec Suppression"); 
+    
+
+   u3=chercher("utilisateur.txt",1 );
+   if(u3.id==-1)
+        printf("introuvable"); 
+	else printf ("exist");*/
+float a=TPE("utilisateur.txt");
+printf("le taux de participants des electeurs est: %f",a);
+
+TPHF( "utilisateur.txt");
+  
+
+return 0; 
 }
