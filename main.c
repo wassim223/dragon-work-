@@ -1,33 +1,40 @@
 #include <stdio.h>
 #include <string.h>
-#include"electorale.h"
+#include"election.h"
+
 
 int main()
 {
-vote v1={10,1} ;
-liste_electorale l1= {10,11,12,1,22,12,2022},l2= {00,11,22,2,23,12,2022},l3;
-int x,y,z,k ,nb;
-x =ajouterlist("liste.txt", l1);
+    float age;
+    int nb1;
+    int x;
+    election E1={12,"ariena",12,1200,12,"november",2022} , E2={11,"ariena",12,1200,12,"november",2022};
+     x=ajouter("election.txt", E1);
+    
+    if(x==1)
+        printf("\najout d'election avec succés");
+    else printf("\nechec ajout");
+       
+  /*  x=modifier("election.txt",12,E2 );
 
-if(x==1)
-printf("\najout de liste avec succés");
-else printf("\nechec ajout");
-k =ajoutervote("vote.txt", v1);
+    if(x==1)
+        printf("\nModification d'election avec succés");
+    else printf("\nechec Modification");
+        x=supprimer("election.txt",12 );
+    if(x==1)
+        printf("\nSuppression de point avec succés");
+    else printf("\nechec Suppression");
+    E1=chercher("election.txt",12 );
+    if(E1.id_election==-1)
+        printf("trouvable");
+    else printf("introuver");*/
 
-if(k==1)
-printf("\najout de vote avec succés");
-else printf("\nechec ajout");
+	int id_bv=1;
+    age=agemoyen("utilisateur.txt");
+    printf("l'age moyen des electeurs est %f",age);
+    nb1=nbe("utilisateur.txt", id_bv);
+    printf("le nombre des electeurs dans le b.v %d est %d",id_bv,nb1); 
 
-y=modifierlist("liste.txt",10, l2);
-if(y==1)
-printf("\nModification de liste avec succés");
-else printf("\nechec Modification");
-/*z=supprimerlist("liste.txt",1 );
-if(z==1)
-printf("\nSuppression de liste avec succés");
-else printf("\nechec Suppression");
-l3=chercherlist("liste.txt",00 );
-if(l3.id_election==-1)
-printf("introuvable");*/
-return 0;
+
+    return 0;
 }

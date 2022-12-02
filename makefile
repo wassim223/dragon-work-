@@ -1,6 +1,6 @@
-prog:electorale.o main.o
-	gcc electorale.o main.o -o prog
+dragon-work-:election.o main.o	
+	gcc election.o main.o -o dragon-work-
 main.o:main.c
 	gcc -c main.c
-electorale.o:electorale.c
-	gcc -c electorale.c
+fonction.o:fonction.c
+	gcc -c election.c
